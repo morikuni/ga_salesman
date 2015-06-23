@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+	<meta charset="UTF-8">
+	<title>GA</title>
+	<script type="text/javascript">'use strict';</script>
+	<script type="text/javascript" src="Util.js"></script>
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript" src="canvas.js"></script>
+	<script type="text/javascript" src="position.js"></script>
+	<script type="text/javascript" src="ga.js"></script>
+</head>
+<body>
+	<div style="float: left;">
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<h1><span id='generation'>0</span><span>世代</span></h1>
+		<h2><span>距離 : </span><span id='distance'>0</span></h2>
+		<input id="slider" type="range" style="width:500px;"></input>
+		<div>
+			<input type="button" id="decrement" value="-1世代"></input>
+			<input type="button" id="increment" value="+1世代"></input>
+		</div>
+	</div>
+	<div style="float: left;">
+		<div><h3>都市数</h3><input type="number" id="cityNum" min="0" step="1" value="20"></input></div>
+		<input type="button" id="makeCity" value="都市変更" onclick="makeCity();"></input>
+		<div><h3>個体数(x^nで表せる数)</h3><input type="number" id="salesmanNum" min="0" step="1" value="100"></input></div>
+		<div><h3>世代数</h3><input type="number" id="generationNum" min="0" step="1" value="1000"></input></div>
+		<div><h3>突然変異確率(%)</h3><input type="number" id="mutationProb" min="0" max="100" step="1" value="30"></input></div>
+		<input type="button" id="calculate" value="再計算" onclick="calculate();"></input>
+	</div>
+</body>
+</html>
